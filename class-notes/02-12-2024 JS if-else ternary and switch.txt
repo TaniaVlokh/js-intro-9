@@ -1,0 +1,8 @@
+
+
+
+let name = '';
+
+gender === 'male' ? fname = 'Alex' : fname = 'Emma';
+
+console.log(fname);

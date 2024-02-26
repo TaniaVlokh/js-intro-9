@@ -1,0 +1,12 @@
+
+
+ASCII:
+
+Character                       ACSII Decimal
+Space                           32
+Ditits [0-9]                    48 - 57 (inclusive)
+Uppercase letters [A-Z]         65 - 90 (inclusive)
+Lowercase letters [a-z]         97 - 122 (inclusive)
+
+
+charCodeAt()
