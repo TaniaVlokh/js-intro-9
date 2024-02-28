@@ -21,3 +21,16 @@ console.log(arr3); // [ 101, 102, 103 ]
 
 // it can add arrays or induvidual elements
 console.log(arr1.concat(555, 666));  // [ 1, 2, 555, 666 ]
+
+
+let nums = [1, 2, 3];
+function maxEnd3(nums){
+    nums.pop(-2);
+    console.log(nums);
+    let max = Math.max(...nums);
+    console.log(max);
+    const arr = [max, max, max];
+    return arr;
+     
+  }
+console.log(maxEnd3(nums));
