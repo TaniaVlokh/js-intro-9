@@ -1,0 +1,24 @@
+
+
+1. for loop: i as an index or counter
+
+SYNTEX: 
+
+for(initialization; termination_condition; update){
+    //block
+}
+
+ITERATION: Each time your loop executes
+INFINITE LOOP: This is a loop having a logical mistake and does not stop
+
+2. while loop
+
+SYNTEX:
+
+while(consition){
+    //block
+}
+
+3. do-while
+-while loop checks the condition and if it is a true, it executes the code
+- 
