@@ -12,4 +12,12 @@ const cityMore5 = [];
 for(const city of cities){
     if(city.length > 5) cityMore5.push(city);
 }
-console.log(cityMore5)
+console.log(cityMore5);
+
+// Task
+const hasIIncluded = [];
+
+for(const city of cities){
+    if(city.toLowerCase().includes('i')) hasIIncluded.push(city);
+}
+console.log(hasIIncluded);
