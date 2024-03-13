@@ -18,3 +18,14 @@ for(const number of numbers){
     }
 }
 console.log(firstP); */
+
+
+const cities = [ 'Rome', 'Kyiv', 'Berlin', 'Brugge', 'LA'];
+
+console.log(cities.find(city => city.length === 4));
+console.log(cities.findLast(city => city.length === 6));
+console.log(cities.findIndex(city => city.includes('LA')));
+console.log(cities.find(city => city.includes('i')));
+console.log(cities.findLast(city => city.length === 4));
+
+

@@ -60,12 +60,3 @@ const CharacterHelper = {
 
 module.exports.CharacterHelper = CharacterHelper;
 
-
-function firstWord(strWord3) {
-    return console.log(strWord3.slice(0, strWord3.indexOf(' ')));
-}
-firstWord("Hello World")
-firstWord("I like JavaScript")
-firstWord("Hello")
-firstWord("")
-firstWord("    ")
