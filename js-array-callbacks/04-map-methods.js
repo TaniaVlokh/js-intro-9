@@ -36,4 +36,21 @@ const newSalary =  salaries.map(x => parseFloat(x.toFixed(2))); //or  Number(x.t
 console.log(newSalary)
 
 
+const products = [
+    { name: "sports car" },
+    { name: "laptop" },
+    { name: "phone" },
+  ];
+
+  const productWithPrice = products.map((product) => {
+    return {...product, price : 100};
+
+  })
+
+  products.forEach((product) => {
+    product.price = 100;
+  });
+
+  console.log(products)
+  console.log(productWithPrice)
 
