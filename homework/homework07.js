@@ -135,3 +135,4 @@ function categorizeCharacters(str) {
 console.log(categorizeCharacters("1234"))             // -> [ '' , '1234', '' ] 
 console.log(categorizeCharacters("abc123$#%"))        // -> [ 'abc', '123', '$#%' ]
 console.log(categorizeCharacters("12ab$%3c%"))        // -> [ 'abc', '123', '$%%' ]
+
