@@ -137,7 +137,8 @@ console.log(noXInVariables(["xyXyxy", "Xx", "ABC"]))      // -> ["yyy", "ABC"
 
 const noXInVariables = arr => arr.toString().split('').filter(el => {
     if(el.toLowerCase() !== 'x') return el;
-}).join('').split(',')
+}).join('').split(',').filter(x => x !== '')
+//const noXInVariables = arr => arr.toString().split('').filter(el => el.toLowerCase() !== 'x').join('').split(',').filter(x => x !== "");
 
 console.log(noXInVariables(["abc", 123, "#$%"])   )       // -> ["abc", 123, "#$%"]
 console.log(noXInVariables(["xyz", 123, "#$%"])   )       // -> ["yz", 123, "#$%"]

@@ -208,3 +208,90 @@ console.log(middleInt(5, 5, 8)   )    // -> 5
 console.log(middleInt(5, 3, 5)   )    // -> 5 
 console.log(middleInt(1, 1, 1)   )    // -> 1 
 console.log(middleInt(-1, 25, 10))    // -> 10
+
+function  firstDuplicate(arr) {
+ for(let i = 0; i < arr.length; i++){
+    if(arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i]))
+        return arr[i]
+    }
+ return -1;
+}
+
+console.log(firstDuplicate([ 3, 7, 10, 0, 3, 10 ]))            //-> 3 
+console.log(firstDuplicate([ 5, 7, 7, 0, 5, 10 ]))             //-> 5 
+console.log(firstDuplicate([ 5, '5', 3, 7, 4 ]))               //-> -1 
+console.log(firstDuplicate([ 123, 'abc', '123', 3, 'abc' ]))   //-> 'abc' 
+console.log(firstDuplicate([ 1, 2, 3]))                        //-> -1 
+console.log(firstDuplicate([ 'foo', 'abc', '123', 'bar' ]))    //-> -1 
+
+function getDuplicates(arr){
+let arrOfDup = [];
+for(let i = 0; i < arr.length; i++){
+    if(arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i]) && !arrOfDup.includes(arr[i])) arrOfDup.push(arr[i])
+}
+return arrOfDup;
+}    
+const getDuplicates = arr => arr.filter(x => arr.indexOf(x) !== arr.lastIndexOf(x))
+console.log(getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ]) )    // -> [ 0, -7 ] 
+console.log(getDuplicates([ 1, 2, 5, 0, 7 ]))    // -> [ ] 
+console.log(getDuplicates(['A', 'foo', '12' , 12, 'bar', 'a', 'a', 'foo' ]))   // -> [ 'foo', 'a’ ] 
+console.log(getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ]))    // -> [ ] 
+
+
+const countVowels = (str) => str.split('').filter(x => 'oiuea'.includes(x)).length 
+console.log(countVowels("Hello"))               // -> 2 
+console.log(countVowels("JavaScript is fun"))   // -> 5 
+console.log(countVowels(""))                    // -> 0
+
+function reverseStringWords(str){
+str = str.split(' ');
+let revArr = []
+for(const word of str){
+    let revWord = word.split('').reverse().join('')
+    revArr.push(revWord)
+}
+ return revArr.join(' ')
+}
+console.log(reverseStringWords("Hello World") )    // -> "olleH dlroW" 
+console.log(reverseStringWords("I like JavaScript"))    // -> "I ekil tpircSavaJ" 
+console.log(reverseStringWords("Hello"))    // -> "olleH" 
+console.log(reverseStringWords("") )    // -> "" 
+console.log(reverseStringWords(" "))    // -> ""
+
+const countConsonants = (str) => str.split('').filter(x => !'oiuea'.includes(x.toLowerCase())).length
+console.log(countConsonants("Hello"))                // -> 3 
+console.log(countConsonants("Hello World"))          // -> 8 
+console.log(countConsonants("JavaScript is fun"))    // -> 12 
+console.log(countConsonants("") )                    // -> 0 
+
+const countMultipleWords = (arr) => arr.filter(x => x.trim().includes(' ')).length
+
+console.log(countMultipleWords([ "foo", "", "  ", "foo bar", "   foo" ]))               // -> 1 
+console.log(countMultipleWords([ "foo", "bar", "foobar", "   foobar   " ]))             // -> 0 
+console.log(countMultipleWords([ "f o o", "b a r", "foo bar", "     foo bar   " ]))     // -> 4 
+console.log(countMultipleWords([ ]))                                                    // -> 0 
+
+function  fizzBuzz(n1, n2){
+    let start = Math.min(n1, n2)
+    let end = Math.max(n1, n2)
+    const result = []
+
+
+    for(let i = start; i <= end; i++){
+        if(i % 3 === 0 && i % 5 === 0 ){
+            result.push('FizzBuzz')
+        }else if(i % 3 === 0){
+            result.push('Fizz')
+        }else if(i % 5 === 0){
+            result.push('Buzz')
+        }else{
+            result.push(i)
+        }
+    }
+    return result.join(' | ')
+}
+
+console.log(fizzBuzz(13, 18))    // -> "13 | 14 | FizzBuzz | 16 | 17 | Fizz" 
+console.log(fizzBuzz(12, 5))     // -> "Buzz | Fizz | 7 | 8 | Fizz | Buzz | 11 | Fizz" 
+console.log(fizzBuzz(5, 5))      // -> "Buzz" 
+console.log(fizzBuzz(9, 6))      // -> "Fizz | 7 | 8 | Fizz" 
