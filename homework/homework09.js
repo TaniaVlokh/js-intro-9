@@ -140,20 +140,29 @@ console.log(fibonacciSeries2(8))    // -> 13
 console.log(fibonacciSeries2(9))    // -> 21
 console.log(fibonacciSeries2(1))    // -> 0
 
-// Task - 8
+// Task - 8 - not good
 function findUniques(arr1, arr2){
-    let  newArr = [];
-
-    for(let i = 0; i < arr2; i++){
-        if(!arr1[i].includes(arr2) && !arr1[i].includes(newArr)){
-            newArr.concat(arr1[i])
-        } 
+    let newArr = [];
+    const arr3 = arr1.concat(arr2)
+    for(const el of arr3){
+        if(arr3.indexOf(el) === arr3.lastIndexOf(el)) newArr.push(el)
     }
 return newArr
 }
-
 console.log(findUniques([], []))                       // -> []
 console.log(findUniques([], [1, 2, 3, 2]) )             // -> [1, 2, 3]
 console.log(findUniques([1, 2, 3, 4], [3, 4, 5, 5]))   // -> [1, 2, 5]
 console.log(findUniques([8, 9], [9, 8, 9]))            // -> []
 console.log(findUniques([-1, -2], [1, 2]))             // -> [-1, -2, 1, 2]
+
+// Task - 9
+function isPowerOf3(num){
+    return num % 3 === 0;
+}
+console.log(isPowerOf3(1) )   // -> true
+console.log(isPowerOf3(2) )   // -> false
+console.log(isPowerOf3(3) )   // -> true
+console.log(isPowerOf3(27))   // -> true
+console.log(isPowerOf3(100))  //  -> false
+console.log(isPowerOf3(81))   // -> true
+console.log(isPowerOf3(9) )   // -> true
