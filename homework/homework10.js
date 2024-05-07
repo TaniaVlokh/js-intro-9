@@ -112,3 +112,73 @@ console.log(splitString("Java", 2))         //-> "Ja va"
 console.log(splitString("Automation", 3))   //-> ""
 console.log(splitString("Hello", 6))        //-> ""
 console.log(splitString("12", 1))           //-> "1 2"
+
+
+const countA = str => str.split('').filter(el => el.toLowerCase() === 'a').length;
+console.log(countA("TechGlobal is a QA bootcamp"))   	//-> 4
+console.log(countA("QA stands for Quality Assurance"))  //  -> 5
+console.log(countA("Cypress"))
+
+//Write a function named noVowel() which takes a string argument and returns a new string with all vowels removed from the original string​.
+// const noVowel = (str) => {
+//     let newStr = '';
+//     for(let i = 0; i < str.length; i++){
+//         if(!'oiuea'.includes(str[i].toLowerCase())){
+//             newStr += str[i]
+//         }
+//     }
+//     return newStr;
+// }
+console.log(noVowel("TechGlobal is a QA bootcamp"));
+
+const noVowel = (str) => str.split('').filter(el => {if(!'oiuea'.includes(el.toLowerCase())) return el}).join('');
+console.log(noVowel("TechGlobal is a QA bootcamp"));
+
+const countPos = (arr) => arr.filter(el => el > 0).length;
+
+console.log(countPos([-45, 0, 0, 34, 5, 67])   	 )  //-> 3
+console.log(countPos([-23, -4, 0, 2, 5, 90, 123]))  //-> 4
+console.log(countPos([0, -1, -2, -3])   		 )  //-> 0
+
+const noDigit = str => str.split('').filter(el => { if(!(el >= 0 && el <=9)) return el }).join('')
+
+
+console.log(noDigit("")   			)	//    -> ""
+console.log(noDigit("Javascript")   	)	//-> "Javascript"
+console.log(noDigit("123Hello")   		)	//-> "Hello"
+console.log(noDigit("123Hello World149")   )	//-> "Hello World"
+console.log(noDigit("123Tech456Global149") ) //-> "TechGlobal"
+
+
+const doubleOrTripleWord = str => {
+    return (str.length % 2 === 0) ? str.repeat(3) : str.repeat(2)
+    }
+console.log(doubleOrTripleWord("Tech"))   	//-> "TechTechTech"
+console.log(doubleOrTripleWord("Apple"))   	//-> "AppleApple"
+console.log(doubleOrTripleWord("")   	)	//-> ""
+console.log(doubleOrTripleWord(" ")   )		//-> " "
+console.log(doubleOrTripleWord("1")   )		//-> "11"
+console.log(doubleOrTripleWord("22")  ) 	//	-> "222222"
+
+
+const reverseStringWords = str => {
+    str = str.trim().split(' ');
+    const newSTR = [];
+    for(let i = 0; i < str.length; i++){
+      let revWord = str[i].split('').reverse().join('');
+      newSTR.push(revWord);
+    }
+    return newSTR.join(' ');
+  }
+
+console.log(reverseStringWords("Hello World"))   		//-> "olleH dlroW"
+console.log(reverseStringWords("I like JavaScript"))   //-> "I ekil tpircSavaJ"
+console.log(reverseStringWords("Hello"))   		       //-> "olleH"
+console.log(reverseStringWords(""))   			       //-> ""
+console.log(reverseStringWords("	"))   			   //-> ""
+
+
+
+
+const countCins = str => str.split('').filter( el => { if(!'oiuea'.includes(el.toLowerCase())) return el}).length
+console.log(countCins('hello'));
