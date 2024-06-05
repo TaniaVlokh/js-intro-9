@@ -65,7 +65,7 @@ console.log(isNeutral("+++", "+++"))             // ->  "+++"
     return words.filter(x => 'ABCDEFGHIJKLM'.includes(x[0])).length >= words.filter(x => 'NOPQRSTUVWXYZ'.includes(x[0])).length
   }
 
-console.logisTrueOrFalse("A big brown fox caught a bad rabbit"))  //-> true
-console.logisTrueOrFalse("Xylophones can obtain Xenon."))         //->  false
-console.logisTrueOrFalse("CHOCOLATE MAKES A GREAT SNACK"))        //-> true
-console.logisTrueOrFalse("All FOoD tAsTEs NIcE for someONe"))     //-> true
+console.log(isTrueOrFalse("A big brown fox caught a bad rabbit"))  //-> true
+console.log(isTrueOrFalse("Xylophones can obtain Xenon."))         //->  false
+console.log(isTrueOrFalse("CHOCOLATE MAKES A GREAT SNACK"))        //-> true
+console.log(isTrueOrFalse("All FOoD tAsTEs NIcE for someONe"))     //-> true
